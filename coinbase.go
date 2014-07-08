@@ -3,7 +3,7 @@ package coinbase
 import (
 	"encoding/json"
 	"errors"
-	"log"
+	//"log"
 	"net/url"
 )
 
@@ -65,7 +65,7 @@ func (c *Coinbase) SendMoney(transaction *SmTransaction) (response SmMoneyRespon
 		return
 	}
 	r, err := c.restClient.Do("POST", "transactions/send_money", string(payload))
-	log.Println(string(r.Body), err)
+	//log.Println(string(r.Body), err)
 	if err = r.HandleErr(err, []int{200}); err != nil {
 		return
 	}
