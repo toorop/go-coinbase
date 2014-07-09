@@ -63,9 +63,9 @@ type Account struct {
 		Amount   amount `json:"amount"`
 		Currency string `json:"currency"`
 	} `json:"native_balance"`
-	CreatedAt jTime `json:"created_at"`
-	Primary   bool  `json:"primary"`
-	Active    bool  `json:"active"`
+	CreatedAt string `json:"created_at"`
+	Primary   bool   `json:"primary"`
+	Active    bool   `json:"active"`
 }
 
 // Accounts  represents a getAccounts response
@@ -102,7 +102,7 @@ type SmTransaction struct {
 // Tansaction represents a transaction
 type Transaction struct {
 	Id        string `json:"id"`
-	CreatedAt jTime  `json:"created_at"`
+	CreatedAt string `json:"created_at"`
 	Hsh       string `json:"hsh"`
 	Notes     string `json:"notes"`
 	Idem      string `json:"idem"`
