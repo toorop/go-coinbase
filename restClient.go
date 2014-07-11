@@ -77,5 +77,6 @@ func (c *rClient) Do(method string, ressource string, payload string) (response 
 	response.StatusCode = r.StatusCode
 	response.Status = r.Status
 	response.Body, err = ioutil.ReadAll(r.Body)
+	//fmt.Println(string(response.Body))
 	return
 }

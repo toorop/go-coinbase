@@ -128,6 +128,6 @@ type Transaction struct {
 // smMoneyResponse represents a response to a send_money_call
 type SmMoneyResponse struct {
 	Success     bool        `json:"success"`
-	Error       []string    `json:"error"`
+	Errors      []string    `json:"errors"`
 	Transaction Transaction `json:"transaction"`
 }
